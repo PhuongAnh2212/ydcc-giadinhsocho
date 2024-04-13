@@ -8,24 +8,38 @@ export const styles = StyleSheet.create({
       backgroundColor: '#fff',
     },
     title: {
-      fontSize: 24,
+      fontSize: 22,
+      fontWeight: 'bold',
       marginBottom: 20,
-      color: 'black'
+      color: '#0C69F1',
+      padding: 20,
+      alignItems: 'center',
+      textAlign: 'center',
     },
     card:{
-      backgroundColor:"#FF0000",
+      backgroundColor:"#EAF7FF",
       width:300,
       height:200,
       justifyContent: 'center',
       alignItems: 'center',
+      borderRadius: 10,
+      borderWidth: 2, // Border width
+      borderColor: '#0C69F1', // Border color
     },
     button:{
-      backgroundColor:"#000000",
+
       width:'100%',
       height:100,
       bottom:0,
       position:"absolute"
-    }
+    },
+    buttonBackground: {
+      bottom: -150,
+      width: 500, // Set width of the button
+      height: 300, // Set height of the button
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
   });
 
 export const SUSPISCIOUS_LINKS =[
