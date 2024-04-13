@@ -17,7 +17,7 @@ const Lesson = ({ navigation }) => {
             <Image style={[styles.img, {top:540}]} source={require('../../assets/gradient.png')}/>
         </View>
         <View style={styles.navigation}>
-            <View style={[styles.button1, {backgroundColor:"#FECE00"}]} onTouchEnd={()=> {navigation.navigate('Flashcard')}}>
+            <View style={[styles.button1, {backgroundColor:"#FF7F1E"}]} onTouchEnd={()=> {navigation.navigate('Flashcard')}}>
             <AntDesign name="book" size={24} color="white" />
                 <Text style={[styles.text]}>Lesson</Text>
             </View>
@@ -62,6 +62,7 @@ styles = StyleSheet.create(
         button1: {
             width: 180,
             height: 200,
+            bottom: 50,
             alignSelf: 'center',
             backgroundColor: '#0884FE',
             color: '#fffff',
