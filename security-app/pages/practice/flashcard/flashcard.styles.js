@@ -21,15 +21,19 @@ const styles = StyleSheet.create({
         transformStyle: 'preserve-3d',
         borderRadius:20,
         width: 300,
+        backfaceVisibility:"hidden",
+
     },
     flipped:{
         
         transform: "rotateY(180deg)",
-        backgroundColor:'#9B2626'
+        backgroundColor:'#9B2626',
+        backfaceVisibility:"hidden",
     },
 
     front:{
         padding:"1%",
+        backfaceVisibility:"hidden",
     },
     back:{
         backfaceVisibility:"hidden",

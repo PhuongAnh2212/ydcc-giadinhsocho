@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator();
 
 function Navigation() {
     return(
-    <Stack.Navigator initialRouteName='Onboarding'>
+    <Stack.Navigator initialRouteName='App'>
         <Stack.Screen name = "Onboarding" component={Onboarding} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "Login" component={Login} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "Regist" component={Regist} options={{headerShown:false, gestureEnabled:false}}/>
