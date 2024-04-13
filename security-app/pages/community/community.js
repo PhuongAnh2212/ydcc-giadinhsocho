@@ -5,7 +5,9 @@ const Community = ({ navigation }) => {
 
     return (
       <View>
-        <Text>Community</Text>
+        <Text onPress={(handleButtonPress) => { navigation.navigate('App'); } }
+         style={{fontSize: 100}}>
+          Community</Text>
       </View>
     );
   };
