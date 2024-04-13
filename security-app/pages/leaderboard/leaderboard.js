@@ -1,5 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
 
 import MamImage from '../../assets/pfp/mam.jpg';
 import DuaImage from '../../assets/pfp/dua.jpg';
@@ -63,7 +66,33 @@ DATA = [
     score:213
   }
 ]
+
+const colorList = [
+  {offset: '0%', color: '#231557', opacity: '1'},
+]
+
 const styles = StyleSheet.create({
+  background: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: '85%',
+    height: 150,
+  },
+  button: {
+    position: 'absolute',
+    width: 300,
+    height: 70,
+    bottom: 20,
+    alignSelf: 'center',
+    backgroundColor: '#E2698F',
+    color: '#fffff',
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    alignItems: 'center', // Center text horizontally
+    justifyContent: 'center',
+  },
   container: {
     flex: 1,
     paddingTop: 22,
@@ -110,10 +139,10 @@ const styles = StyleSheet.create({
     paddingLeft: 13,
     flex:2,
     alignSelf: 'center'
-  }
+  },
 });
 
-const Leaderboard = () => {
+function Leaderboard ({navigation}) {
   x=1; //để print ra stt 1 2 3 4 5 cho leaderboard
 
   const [users, setUsers] = useState([]);
@@ -274,8 +303,20 @@ const Leaderboard = () => {
         </View>}
         keyExtractor={item => item.id}
       />
+      
+        <LinearGradient
+          // Background Linear Gradient
+          colors={['rgba(245,199,0,1)', 'transparent']}
+          start= {[0.5,1]}
+          end={[0.5,0]}
+          style={styles.background}>
+          <TouchableOpacity style={styles.button} onPress={(handleButtonPress) => { navigation.navigate('Community'); } }> 
+            <Text style={[styles.buttonText, { color: '#FFFFFF', fontWeight: 'bold', fontSize: 20 }]}>Next</Text>
+          </TouchableOpacity>
+        </LinearGradient>
     </View>
   );
 };
+
 
 export default Leaderboard;
