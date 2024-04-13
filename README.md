@@ -7,10 +7,12 @@ Pull về xong thì
 `npm install`
 
 `npm install @react-navigation/bottom-tabs`
+
 `npm install @react-navigation/bottom-tabs`
 hai cái này để intall lib (?) 
 
 `npm install react-native-safe-area-context@4.8.2`
+
 `npm install react-native-screens@~3.29.0`
  2 cái này để nó đúng ver để nó k bug
 
