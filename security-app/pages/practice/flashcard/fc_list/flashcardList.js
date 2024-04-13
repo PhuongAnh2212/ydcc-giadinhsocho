@@ -15,8 +15,6 @@ const FlashcardList = ({flashcard}) => {
         }
     </View>
 
-    <Text>meomeo</Text>
-
     <View style={styles.answer} role='tab' accessible={true}>
         <Text style = {styles.explain}>
         {flip? flashcard.answer:" "}

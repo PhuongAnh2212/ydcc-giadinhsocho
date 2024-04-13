@@ -18,15 +18,10 @@ import { StyleSheet, View, Text, Button } from 'react-native';
 
 
 const Homepage = ({ navigation }) => {
-  const goToDetails = () => {
-    // Navigate to another screen (e.g., Details screen)
-    navigation.navigate('Details');
-  };
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Home</Text>
-      <Button title="Go to Details" onPress={goToDetails} />
     </View>
   );
 };
