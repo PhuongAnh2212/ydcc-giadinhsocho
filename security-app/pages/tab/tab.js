@@ -35,7 +35,7 @@ function MyTabs() {
                 <MaterialCommunityIcons name="account-group-outline" color={color} size={26} />
               ),
               tabBarShowLabel: false}}/>
-            <Tab.Screen name="Setting" component={Setting} 
+            <Tab.Screen name="Setting" component={Homepage} 
           options={{headerShown:false,
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="saw-blade" color={color} size={26} />

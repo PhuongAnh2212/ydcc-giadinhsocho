@@ -8,6 +8,7 @@ import Login from '../loginnregist/login';
 import Regist from '../loginnregist/regist'
 import MyTabs from '../tab/tab'
 import DragnDrop from '../practice/drag and drop game/dnd';
+import Community from '../community/community';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,8 @@ function Navigation() {
         <Stack.Screen name = 'App' component={MyTabs} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "Login" component={Login} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "Regist" component={Regist} options={{headerShown:false, gestureEnabled:false}}/>
+        <Stack.Screen name = "Community" component={Community} options={{headerShown:false, gestureEnabled:false}}/>
+
     </Stack.Navigator>
     
     )
