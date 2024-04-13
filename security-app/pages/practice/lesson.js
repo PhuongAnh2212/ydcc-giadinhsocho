@@ -1,7 +1,9 @@
-import { LinearGradient } from 'expo-linear-gradient';
+// import { LinearGradient } from 'expo-linear-gradient';
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, Button, Image } from 'react-native';
-import { GestureHandlerRootView, ScrollView } from 'react-native-gesture-handler';
+// import { GestureHandlerRootView, ScrollView } from 'react-native-gesture-handler';
+import { Entypo } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 
 // Ajax is me frfr (Get urges after a minor inconvenience)
 
@@ -15,12 +17,14 @@ const Lesson = ({ navigation }) => {
             <Image style={[styles.img, {top:540}]} source={require('../../assets/gradient.png')}/>
         </View>
         <View style={styles.navigation}>
-        <View style={[styles.button1, {backgroundColor:"#FECE00"}]} onTouchEnd={()=> {navigation.navigate('Flashcard')}}>
-            <Text style={[styles.text]}>Lesson</Text>
-        </View>
-        <View style={[styles.button1]}>
-            <Text style={[styles.text]}>Practice</Text>
-        </View>
+            <View style={[styles.button1, {backgroundColor:"#FECE00"}]} onTouchEnd={()=> {navigation.navigate('Flashcard')}}>
+            <AntDesign name="book" size={24} color="white" />
+                <Text style={[styles.text]}>Lesson</Text>
+            </View>
+            <View style={[styles.button1]}>
+                <Entypo name="graduation-cap" size={24} color="white" />
+                <Text style={[styles.text]}>Practice</Text>
+            </View>
 
         </View>
 
@@ -37,7 +41,7 @@ styles = StyleSheet.create(
             position:'absolute',
             width:"100%",
             objectFit:'contain',
-            top:-170
+            top:-200
         },
         img_container:{
             // position:'absolute',
@@ -51,7 +55,7 @@ styles = StyleSheet.create(
             backgroundColor:"#FFFFFF"
         },
         text: {
-            fontSize: 24,
+            fontSize: 20,
             fontWeight: 'bold',
             color: '#fff'
         },
@@ -71,7 +75,7 @@ styles = StyleSheet.create(
             flexDirection:"row",
             gap:10,
             justifyContent:'center',
-            top:720
+            top:640
         }
     }
 )
