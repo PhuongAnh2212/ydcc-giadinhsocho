@@ -9,16 +9,24 @@ const styles = StyleSheet.create({
     gap:100
     },
     navigate:{
+        position:'absolute',
+        bottom:30,
         flexDirection:"row",
-        gap:50,
+        gap:10,
     }
     ,
     selectButton:{
-        width:150,
-        height:70,
+        width: 190,
+        height: 70,
+        bottom: 0,
+        alignSelf: 'center',
+        backgroundColor: '#E2698F',
+        color: '#fffff',
+        paddingVertical: 12,
+        paddingHorizontal: 24,
+        borderRadius: 8,
+        alignItems: 'center', // Center text horizontally
         justifyContent: 'center',
-        alignItems: 'center',  
-        borderRadius:20,
     },
     back:{
         backgroundColor:"#FECE00",
