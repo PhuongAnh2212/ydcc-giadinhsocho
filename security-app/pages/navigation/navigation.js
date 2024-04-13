@@ -7,7 +7,7 @@ import Onboarding2 from '../onboarding/onboarding2';
 import Login from '../loginnregist/login';
 import Regist from '../loginnregist/regist'
 import MyTabs from '../tab/tab'
-import DragnDrop from '../practice/drag and drop game/dnd';
+import DragnDrop from '../games/drag and drop game/dnd';
 import Community from '../community/community';
 import Flashcard from '../practice/flashcard/flashcard';
 import Lesson from '../practice/lesson';
