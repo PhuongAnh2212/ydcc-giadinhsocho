@@ -7,7 +7,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 // Ajax is me frfr (Get urges after a minor inconvenience)
 
-const Lesson = ({ navigation }) => {
+const Quiz = ({ navigation }) => {
   return (
     <View>
         <View style={styles.img_container}>
@@ -79,4 +79,4 @@ styles = StyleSheet.create(
         }
     }
 )
-export default Lesson;
+export default Quiz;
