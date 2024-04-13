@@ -48,7 +48,6 @@ const styles = StyleSheet.create({
     button_des: {
       fontSize: 20,
       fontWeight:'bold',
-      zIndex:10
     },
     qna:{
         position:'absolute',

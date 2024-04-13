@@ -9,6 +9,7 @@ import Leaderboard from '../leaderboard/leaderboard';
 import Lesson from '../practice/lesson';
 import DragnDrop from '../games/drag and drop game/dnd';
 import Quiz from '../practice/quiz';
+import GameMenu from '../games/menu/game-menu';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +25,7 @@ function MyTabs() {
                 ),
                 tabBarShowLabel: false, 
             }}/>
-            <Tab.Screen name = "Practice" component={DragnDrop} 
+            <Tab.Screen name = "Practice" component={GameMenu} 
               options={{headerShown:false, gestureEnabled:false,
               tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="gamepad-variant-outline" color={color} size={26} />
