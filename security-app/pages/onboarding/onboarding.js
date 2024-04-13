@@ -6,10 +6,24 @@ import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 const Onboarding = () => {
     return (
     <><ImageBackground
+<<<<<<< Updated upstream
           source={require('security-app/assets/onb1.png')}
           style={styles.background} /><View style={styles.container}>
               <Text style={styles.text}>Hi there, you are...</Text>
           </View></>
+=======
+            source={require('security-app/assets/onb1.png')}
+            style={styles.background} /><View style={styles.container}>
+                <Text style={styles.text}>Hi there, you are...</Text>
+                <TouchableOpacity style={styles.button1} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }> 
+                        <Text style={[styles.buttonText1, { color: '#FFFFFF', fontWeight: 'bold', fontSize:20 }]}>Next</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.buttonmain} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
+                    <Text style={[styles.buttonmainText, { color: '#FFFFFF', fontWeight: 'bold'}]}>Middle-age</Text>
+                </TouchableOpacity>
+            </View></>
+>>>>>>> Stashed changes
   );
 };
 

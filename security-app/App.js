@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
 import Navigation from './pages/navigation/navigation';
+// import Setting from './pages/settings/settings';
 
 export default function App() {
   return (
