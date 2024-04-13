@@ -15,18 +15,14 @@ const Flashcard = ({ navigation }) => {
                 return <FlashcardList flashcard = {flashcard} key = {flashcard.id}
                 />
             })}
-        <View role='button' accessible={true} onTouchEnd={()=>{
-        setFlip(!flip)    
-        }}>
+        <View role='button' accessible={true}    >
         <Text> 
             flip
         </Text>
         
     </View>
 
-    <View role='button' accessible={true} onTouchEnd={()=>{
-        setFlip(!flip)    
-        }}>
+    <View role='button' accessible={true}>
         <Text> 
             next
         </Text>
