@@ -1,7 +1,9 @@
+// Import necessary dependencies from React and React Native
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
 
-export default function Onboarding1 ({navigation}) {
+// Define your functional component
+function Onboarding1 ({navigation}) {
     const handleButtonPress = () => {
         console.log('Button pressed!');
     };
@@ -14,15 +16,14 @@ export default function Onboarding1 ({navigation}) {
                 <Text style={[styles.text, {fontWeight: 'bold' }]}>receive surprise content?</Text>
 
                 <TouchableOpacity style={styles.button1} onPress={(handleButtonPress) => { navigation.navigate('Onboarding2'); } }>
-                    <Text style={[styles.buttonText1, { color: '#FFFFFF', fontWeight: 'bold' }]}>Next</Text>
+                    <Text style={[styles.buttonText1, { color: '#FFFFFF', fontWeight: 'bold', fontSize:20 }]}>Next</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button2} onPress={(handleButtonPress) => { navigation.navigate('Onboarding'); } }>
-                    <Text style={[styles.buttonText1, { color: '#E2698F', fontWeight: 'bold' }]}>Back</Text>
+                    <Text style={[styles.buttonText1, { color: '#E2698F', fontWeight: 'bold', fontSize:20 }]}>Back</Text>
                 </TouchableOpacity>
             </View></>
   );
 };
-
 
 const styles = StyleSheet.create({
     background: {
@@ -72,4 +73,6 @@ const styles = StyleSheet.create({
         alignItems: 'center', // Center text horizontally
         justifyContent: 'center',
       },
-});
+    });
+
+export default Onboarding1;
