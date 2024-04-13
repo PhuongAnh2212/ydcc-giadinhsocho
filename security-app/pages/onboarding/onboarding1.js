@@ -1,7 +1,5 @@
-// Import necessary dependencies from React and React Native
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
-import LottieView from 'lottie-react-native';
+import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image } from 'react-native';
 
 // Define your functional component
 function Onboarding1 ({navigation}) {
@@ -14,12 +12,6 @@ function Onboarding1 ({navigation}) {
             source={require('../../assets/OBBG/OB2.png')}
             style={styles.background} /><View style={styles.container}>
                 <Text style={styles.text}>Do you want to</Text>
-                <LottieView
-                    style={styles.animation}
-                    source={require('../../assets/ob.json')}
-                    autoPlay
-                    loop
-                />
                 <Text style={[styles.text, {fontWeight: 'bold' }]}>receive surprise content?</Text>
 
                 <TouchableOpacity style={styles.button1} onPress={(handleButtonPress) => { navigation.navigate('Onboarding2'); } }>
@@ -28,6 +20,10 @@ function Onboarding1 ({navigation}) {
                 <TouchableOpacity style={styles.button2} onPress={(handleButtonPress) => { navigation.navigate('Onboarding'); } }>
                     <Text style={[styles.buttonText1, { color: '#FFFFFF', fontWeight: 'bold', fontSize:20 }]}>No</Text>
                 </TouchableOpacity>
+                <Image  //ảnh ava người dùng
+                        style={[styles.icon, { width: 400, height: 500 }]}
+                        source={require('../../assets/gift.png')}
+                    />
             </View></>
 
   );
@@ -47,11 +43,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#0950F4',
     },
-    animation: {
-        right: 30,
+    icon:{
+        position: 'absolute',
         bottom: 200,
-        width: '100%',
-      },
+    },
     text: {
         bottom: 550,
         fontSize: 24,
