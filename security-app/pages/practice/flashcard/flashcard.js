@@ -36,7 +36,7 @@ const Flashcard = ({ navigation }) => {
             
         </View>
         <View style={[styles.selectButton,styles.next]} role='button' accessible={true} onTouchEnd={()=>{
-            current_tab >= flashcards.length-1? setCurrent_tab(current_tab):setCurrent_tab(current_tab+1)}}>
+            current_tab >= flashcards.length-1? navigation.navigate('Quiz'):setCurrent_tab(current_tab+1)}}>
         <Text style={[styles.button_des, {
                 color:"#FFFFFF"
             }]}> 
