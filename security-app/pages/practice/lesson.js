@@ -7,7 +7,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 // Ajax is me frfr (Get urges after a minor inconvenience)
 
-const Quiz = ({ navigation }) => {
+const Lesson = ({ navigation }) => {
   return (
     <View>
         <View style={styles.img_container}>
@@ -61,9 +61,9 @@ styles = StyleSheet.create(
         },
         button1: {
             width: 180,
-            height: 70,
+            height: 200,
             alignSelf: 'center',
-            backgroundColor: '#E2698F',
+            backgroundColor: '#0884FE',
             color: '#fffff',
             paddingVertical: 12,
             paddingHorizontal: 24,
@@ -79,4 +79,6 @@ styles = StyleSheet.create(
         }
     }
 )
-export default Quiz;
+
+export default Lesson;
+

@@ -34,7 +34,7 @@ const SAMPLE_FLASHCARD = {
       img: require('../../../../assets/answer/2.png')
   },
   3:{
-      img: require('../../../../assets/answer/1.png')
+      img: require('../../../../assets/answer/3.jpg')
   }
 }
 
