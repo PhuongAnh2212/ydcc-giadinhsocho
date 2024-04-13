@@ -7,10 +7,11 @@ Pull về xong thì
 `npm install`
 
 
-
 `npm install @react-navigation/bottom-tabs`
 
 `npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons`
+
+`npx expo install expo-linear-gradient`
 
 install libs đi 
 
