@@ -9,14 +9,18 @@ export default function Onboarding2 ({navigation}) {
     <><ImageBackground
           source={require('security-app/assets/onb1.png')}
           style={styles.background} /><View style={styles.container}>
+
+            <Text style={styles.text}>Hi there, you are...</Text>
+
             <Text style={styles.text}>Choose your</Text>
             <Text style={[styles.text, {fontWeight: 'bold' }]}>preferable UI</Text>
             <TouchableOpacity style={styles.button1} onPress={(handleButtonPress) => { navigation.navigate('App'); } }>
-                    <Text style={[styles.buttonText1, { color: '#FFFFFF', fontWeight: 'bold' }]}>Next</Text>
+                    <Text style={[styles.buttonText1, { color: '#FFFFFF', fontWeight: 'bold', fontSize: 20 }]}>Next</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button2} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
-                    <Text style={[styles.buttonText1, { color: '#E2698F', fontWeight: 'bold' }]}>Back</Text>
+                    <Text style={[styles.buttonText1, { color: '#E2698F', fontWeight: 'bold', fontSize:20 }]}>Back</Text>
                 </TouchableOpacity>
+
           </View></>
   );
 };

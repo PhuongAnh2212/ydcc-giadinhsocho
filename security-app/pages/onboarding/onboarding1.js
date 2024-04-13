@@ -22,6 +22,7 @@ function Onboarding1 ({navigation}) {
                     <Text style={[styles.buttonText1, { color: '#E2698F', fontWeight: 'bold', fontSize:20 }]}>Back</Text>
                 </TouchableOpacity>
             </View></>
+
   );
 };
 
