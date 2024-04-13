@@ -1,16 +1,17 @@
 // Import necessary dependencies from React and React Native
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
-
+import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
 // Define your functional component
-const Onboarding2 = () => {
-    return (
+export default function Onboarding2 ({navigation}) {
+    const handleButtonPress = () => {
+        console.log('Button pressed!');
+    };    return (
     <><ImageBackground
           source={require('security-app/assets/onb1.png')}
           style={styles.background} /><View style={styles.container}>
-<<<<<<< Updated upstream
-              <Text style={styles.text}>Hi there, you are...</Text>
-=======
+
+            <Text style={styles.text}>Hi there, you are...</Text>
+
             <Text style={styles.text}>Choose your</Text>
             <Text style={[styles.text, {fontWeight: 'bold' }]}>preferable UI</Text>
             <TouchableOpacity style={styles.button1} onPress={(handleButtonPress) => { navigation.navigate('App'); } }>
@@ -19,7 +20,7 @@ const Onboarding2 = () => {
                 <TouchableOpacity style={styles.button2} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
                     <Text style={[styles.buttonText1, { color: '#E2698F', fontWeight: 'bold', fontSize:20 }]}>Back</Text>
                 </TouchableOpacity>
->>>>>>> Stashed changes
+
           </View></>
   );
 };
@@ -38,9 +39,38 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 24,
-        fontWeight: 'bold',
+        textAlign: 'left',
+        fontWeight: 'regular',
         color: '#fff'
     },
-    });
-
-export default Onboarding2;
+    button1: {
+        position: 'absolute',
+        width: 180,
+        height: 70,
+        bottom: 60,
+        right: 15,
+        alignSelf: 'center',
+        backgroundColor: '#E2698F',
+        color: '#fffff',
+        paddingVertical: 12,
+        paddingHorizontal: 24,
+        borderRadius: 8,
+        alignItems: 'center', // Center text horizontally
+        justifyContent: 'center',
+      },
+      button2: {
+        position: 'absolute',
+        width: 180,
+        height: 70,
+        bottom: 60,
+        left: 15,
+        alignSelf: 'center',
+        backgroundColor: '#F5B4C8',
+        color: '#fffff',
+        paddingVertical: 12,
+        paddingHorizontal: 24,
+        borderRadius: 8,
+        alignItems: 'center', // Center text horizontally
+        justifyContent: 'center',
+      },
+});
