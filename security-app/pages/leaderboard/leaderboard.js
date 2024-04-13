@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
-import { TouchableOpacity } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient';
 
 import MamImage from '../../assets/pfp/mam.jpg';
 import DuaImage from '../../assets/pfp/dua.jpg';
@@ -71,27 +69,6 @@ const colorList = [
 ]
 
 const styles = StyleSheet.create({
-  background: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: '85%',
-    height: 150,
-  },
-  button: {
-    position: 'absolute',
-    width: 380,
-    height: 70,
-    bottom: 20,
-    alignSelf: 'center',
-    backgroundColor: '#0950F4',
-    color: '#fffff',
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    borderRadius: 12,
-    alignItems: 'center', // Center text horizontally
-    justifyContent: 'center',
-  },
   container: {
     flex: 1,
     paddingTop: 22,
@@ -302,21 +279,6 @@ function Leaderboard ({navigation}) {
         </View>}
         keyExtractor={item => item.id}
       />
-      
-      <LinearGradient
-          // Background Linear Gradient
-          colors={['rgba(255,255,255,1)', 'rgba(255,255,255,0)']}
-          start= {[0.5,1]}
-          end={[0.5,0]}
-          style={styles.background}>
-            {/* <Image
-                style={styles.tinyLogo}
-                source={require('./image/white.png')}
-            /> */}
-          <TouchableOpacity style={styles.button} onPress={(handleButtonPress) => { navigation.navigate('Community'); } }> 
-            <Text style={[styles.buttonText, { color: '#CDE7FF', fontWeight: 'bold', fontSize: 20 }]}>Access Community</Text>
-          </TouchableOpacity>
-        </LinearGradient>
     </View>
   );
 };
