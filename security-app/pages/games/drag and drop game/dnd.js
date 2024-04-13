@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, View, Text, Button, Animated } from 'react-native';
+import { StyleSheet, View, Text, Button, Animated, ImageBackground } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { styles } from './dnd.module';
 import Dragable from './dragable'
@@ -31,6 +31,7 @@ const DragnDrop = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      
       <View>
         {
           SUSPISCIOUS_LINKS.map((links)=> <Dragable isActive = {isActive} ID= {links} used_ID = {used_ID} setUsed_ID = {setUsed_ID}
@@ -40,7 +41,13 @@ const DragnDrop = ({ navigation }) => {
           used_ID.length >= SUSPISCIOUS_LINKS.length? <Text style = {styles.title}> Out of line </Text>: <Text > </Text>
         }
       </View>
-      <View style={styles.button} onTouchEnd={()=> {random_num()}}/>
+      <View style={styles.button} onTouchEnd={()=> {random_num()}}>
+      </View>
+      <ImageBackground
+          source={require('../../../assets/trash.png')}
+          style={styles.buttonBackground}
+          imageStyle={styles.imageStyle}
+        />
     </View>
   );
 };
