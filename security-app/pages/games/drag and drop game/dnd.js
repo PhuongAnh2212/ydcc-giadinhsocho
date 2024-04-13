@@ -28,12 +28,12 @@ const DragnDrop = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.card}>
+      <View>
         {
-          used_ID.length >= SUSPISCIOUS_LINKS.length? <Text style = {styles.title}> No more link</Text> :<Dragable LINK= {SUSPISCIOUS_LINKS[id]}/>
+          used_ID.length >= SUSPISCIOUS_LINKS.length? <Text style = {styles.title}> No more link</Text> :<Dragable ID= {id}/>
         }
       </View>
-      <View style={styles.button} onTouchEnd={()=> random_num()}/>
+      <View style={styles.button} onTouchEnd={()=> {random_num()}}/>
     </View>
   );
 };
