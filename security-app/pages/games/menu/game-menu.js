@@ -9,7 +9,7 @@ const GameMenu = ({ navigation }) => {
 
     <View style={{
         paddingTop: 50,
-        // maxWidth: '100%'
+        maxWidth: '100%'
     }}>
         <Text style = {[styles.lesson]}>Game Zone</Text>
         <Text style = {[styles.explain]}>Learn by playing!</Text>

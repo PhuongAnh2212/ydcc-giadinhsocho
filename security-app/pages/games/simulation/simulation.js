@@ -6,19 +6,26 @@ import { StyleSheet, View, Text, Button, Image, ImageBackground } from 'react-na
 const Simulation = ({ navigation }) => {
     const [sim, setFlashcards] = useState(SIMULATION)
     const [current_tab, setCurrent_tab]= useState(0)
-  
-  const goToNextPage = () => {
-    // Navigate to another screen (e.g., Details screen)
-    setCurrent_tab(current_tab+1);
-  };
   return (
-    <View onPress={(
-        current_tab >= SIMULATION.length?
-        navigation.navigate("Onboarding"):setCurrent_tab(current_tab+1))}>
-        <ImageBackground 
+
+    <View style={{
+        width:'100%'
+    }}
+    >
+        <ImageBackground
             style={styles.image} 
-            source={SIMULATION[0].image}
-            />
+            source={SIMULATION[current_tab].image} 
+            
+        />
+        <Text 
+            onPress={() => {
+                current_tab >= SIMULATION.length-1?
+                navigation.navigate("GameMenu"):setCurrent_tab(current_tab+1)}}
+            style={{fontSize:100,
+                    opacity:100}}
+            >
+                {current_tab}
+        </Text>
     </View>
     
     
@@ -52,6 +59,10 @@ export const SIMULATION = [
     {
         id: 4,
         image: require('../../../assets/sim/sim3.png')
+    },
+    {
+        id: 5,
+        image: require('../../../assets/sim/congratulations.png')
     }
 ]
 
