@@ -10,7 +10,7 @@ function Onboarding1 ({navigation}) {
 
     return (
     <><ImageBackground
-            source={require('security-app/assets/onb1.png')}
+            source={require('../../assets/OBBG/OB2.png')}
             style={styles.background} /><View style={styles.container}>
                 <Text style={styles.text}>Do you want to</Text>
                 <Text style={[styles.text, {fontWeight: 'bold' }]}>receive surprise content?</Text>
@@ -30,7 +30,9 @@ const styles = StyleSheet.create({
     background: {
         flex: 1,
         resizeMode: 'cover',
-        justifyContent: 'center',
+        justifyContent: 'center', 
+        width:420,
+        height: 900
     },
     container: {
         flex: 1,
