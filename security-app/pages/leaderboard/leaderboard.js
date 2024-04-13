@@ -80,15 +80,15 @@ const styles = StyleSheet.create({
   },
   button: {
     position: 'absolute',
-    width: 300,
+    width: 380,
     height: 70,
     bottom: 20,
     alignSelf: 'center',
-    backgroundColor: '#E2698F',
+    backgroundColor: '#0950F4',
     color: '#fffff',
     paddingVertical: 12,
     paddingHorizontal: 24,
-    borderRadius: 8,
+    borderRadius: 12,
     alignItems: 'center', // Center text horizontally
     justifyContent: 'center',
   },
@@ -314,7 +314,7 @@ function Leaderboard ({navigation}) {
                 source={require('./image/white.png')}
             /> */}
           <TouchableOpacity style={styles.button} onPress={(handleButtonPress) => { navigation.navigate('Community'); } }> 
-            <Text style={[styles.buttonText, { color: '#FFFFFF', fontWeight: 'bold', fontSize: 20 }]}>Next</Text>
+            <Text style={[styles.buttonText, { color: '#CDE7FF', fontWeight: 'bold', fontSize: 20 }]}>Access Community</Text>
           </TouchableOpacity>
         </LinearGradient>
     </View>

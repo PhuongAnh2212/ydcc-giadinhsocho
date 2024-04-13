@@ -61,9 +61,9 @@ styles = StyleSheet.create(
         },
         button1: {
             width: 180,
-            height: 70,
+            height: 200,
             alignSelf: 'center',
-            backgroundColor: '#E2698F',
+            backgroundColor: '#0884FE',
             color: '#fffff',
             paddingVertical: 12,
             paddingHorizontal: 24,
