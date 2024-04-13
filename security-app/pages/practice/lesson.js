@@ -9,7 +9,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 const Lesson = ({ navigation }) => {
   return (
-    <View style={{}}>
+    <View style={{width:'100%'}}>
         <View style={styles.img_container}>
             <Image style={styles.img} source={require('../../assets/lesson.png')}/>
         </View>

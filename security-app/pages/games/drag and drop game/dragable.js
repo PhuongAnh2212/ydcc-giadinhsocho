@@ -5,25 +5,29 @@ import { styles, SUSPISCIOUS_LINKS  } from './dnd.module';
 
 // I'm like Odysseus stucking on Calypso island for 7 years
 
-const Dragable = ({ ID, isActive, onSorted, used_ID, setUsed_ID }) => {
+const Dragable = ({ ID, isActive, setisActive ,onSorted, used_ID, setUsed_ID, pts, setPts}) => {
     const position = useRef(new Animated.ValueXY()).current
     const opacity = useRef(new Animated.Value(1)).current
     const [dragging, setDragging] = useState(false)
     const [sus, setsus] = useState(false)
     const [sorted, setSorted] = useState(false)
     const isSortedCorrectly = (gesture) =>{
-        console.log(gesture.moveY )
-        if (ID.is_sus && gesture.moveY > 700){
-            used_ID.push(isActive)
-            onSorted()
+        if (gesture.moveY > 800){
+            setSorted(true)
+            return true;
+        }
+        if (gesture.moveX > 200){
+            setSorted(true)
             return true
         }
         return false;
     }
     useEffect(()=>{
-        console.log("meo")
-    }, [isActive])
-
+        if(isActive<= SUSPISCIOUS_LINKS.length)
+        console.log(used_ID)
+        setPts(pts+1)
+        used_ID.add(isActive-1)
+    },[isActive])
     const panResponder = useRef(PanResponder.create(
         {
             onStartShouldSetPanResponder:()=> true,
@@ -43,17 +47,14 @@ const Dragable = ({ ID, isActive, onSorted, used_ID, setUsed_ID }) => {
             ),
             onPanResponderRelease:(e, gesture) => {
                 if (isSortedCorrectly(gesture)){
-                    
                     Animated.timing(opacity, {
                         toValue:0,
-                        duration:100,
+                        duration:0,
                     useNativeDriver: false
-                    }).start(()=> {
-                        setSorted(true)
-                        setDragging(false)
-                    })
+                    }).start();
+                setDragging (false);
                 }
-                else{Animated.spring(position, {
+                else {Animated.spring(position, {
                     toValue:{
                         x: 0,
                         y: 0
@@ -75,8 +76,7 @@ const Dragable = ({ ID, isActive, onSorted, used_ID, setUsed_ID }) => {
   return (
     <Animated.View style={[styles.card, {
         transform:position.getTranslateTransform(),
-        opacity:dragging? 0.8:opacity
-
+        opacity:dragging? 0.8:opacity,
     }]
     }
     {...panResponder.panHandlers}>

@@ -8,30 +8,30 @@ import Dragable from './dragable'
 // I'm like Odysseus stucking on Calypso island for 7 years
 
 const DragnDrop = ({ navigation }) => {
-    const [id, setID] = useState(1)
+    const [pts, setPts] = useState(0)
     const [isActive, setisActive] = useState(1)
-    const [used_ID, setUsed_ID] = useState([])
+    const [used_ID, setUsed_ID] = useState(new Set())
     const [dragging, setDragging] = useState(false)
     const random_num = ()=>{
-      let loop = true;
-      let idx = 0;
-      while (loop){
-        idx = Math.floor(Math.random()*SUSPISCIOUS_LINKS.length);
-        console.log(used_ID)
-        if (!((idx+1) in used_ID)){
-          loop = false;
-        };
-      };
-      setisActive(idx)
-      
+      // let loop = true;
+      // let idx = 0;
+      // while (loop){
+      //   idx = Math.floor(Math.random()*SUSPISCIOUS_LINKS.length);
+      //   console.log(used_ID)
+      //   console.log(idx+1)
+      //   if (!((idx+1) in used_ID)){
+      //     loop = false;
+      //   };
+      // };
+      setisActive(isActive+1)
     }
-
-    useEffect(()=>{
-      random_num();
-    }, [used_ID]);
-
-  return (
+    
+    
+    
+    
+    return (
     <View style={styles.container}>
+
       <MaterialCommunityIcons name="arrow-left" color={"#0F1113"} size={26} style = {{
           left:20, 
           position: 'absolute',
@@ -39,19 +39,22 @@ const DragnDrop = ({ navigation }) => {
           onTouchEnd={()=>{
                 navigation.goBack()
             }}/>
+
+      <Text style={styles.title}>{pts}</Text>
+
       
       <View>
         {
-          SUSPISCIOUS_LINKS.map((links)=> <Dragable isActive = {isActive} ID= {links} used_ID = {used_ID} setUsed_ID = {setUsed_ID}
-          onSorted = {()=>random_num()}/>)
-        }
+          SUSPISCIOUS_LINKS.map((links)=> <Dragable key={links.id} isActive = {isActive} 
+          setisActive={setisActive} ID= {links} used_ID = {used_ID} 
+          setUsed_ID = {setUsed_ID} pts = {pts} setPts ={setPts}/>)}
         {
-          used_ID.length >= SUSPISCIOUS_LINKS.length? <Text style = {styles.title}> Out of line </Text>: <Text > </Text>
+          isActive >= SUSPISCIOUS_LINKS.length? <Text style = {styles.title}> Out of line </Text>: <Text > </Text>
         }
       </View>
       <View style={styles.button} onTouchEnd={()=> {random_num()}}>
-      </View>
-      <ImageBackground
+      </View >
+      <ImageBackground  onTouchEnd={()=> {random_num()}}
           source={require('../../../assets/trash.png')}
           style={styles.buttonBackground}
           imageStyle={styles.imageStyle}
