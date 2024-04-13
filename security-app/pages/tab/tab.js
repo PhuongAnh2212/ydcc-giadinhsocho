@@ -8,7 +8,7 @@ import Leaderboard from '../leaderboard/leaderboard';
 // import Setting from '../settings/settings';
 import Lesson from '../practice/lesson';
 import DragnDrop from '../games/drag and drop game/dnd';
-import Quiz from '../practice/lesson';
+import Quiz from '../practice/quiz';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,6 +17,7 @@ function MyTabs() {
       <Tab.Navigator initialRouteName='Homepage'>
             <Tab.Screen name="Lesson" component={Lesson} 
               options={{
+                headerShown:false,
                 tabBarLabel: 'Home',
                 tabBarIcon: ({ color }) => (
                   <MaterialCommunityIcons name="home-variant" color={color} size={26} />

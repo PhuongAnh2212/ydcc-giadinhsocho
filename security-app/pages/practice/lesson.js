@@ -79,4 +79,6 @@ styles = StyleSheet.create(
         }
     }
 )
+
 export default Lesson;
+

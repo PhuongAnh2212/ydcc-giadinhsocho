@@ -14,6 +14,9 @@ const FlashcardList = ({flashcard}) => {
           </Text>:<Image style={styles.img} source={SAMPLE_FLASHCARD[flashcard.id].img}/>
         }
     </View>
+
+    <Text>meomeo</Text>
+
     <View style={styles.answer} role='tab' accessible={true}>
         <Text style = {styles.explain}>
         {flip? flashcard.answer:" "}
