@@ -54,15 +54,17 @@ const styles = StyleSheet.create({
         flex:1,
         // backgroundColor: '#E2698F',
         height:400,
-        alignContent:'flex-start',
-        justifyContent:'flex-start',
-        flexDirection:'column'
+        alignSelf:'center',
+        justifyContent:'center',
+        alignContent:'center',
+        flexDirection:'column',
     }
     ,
     card:{
         backgroundColor:'#0C69F1',
         justifyContent:'center',
         alignContent:'center',
+        alignSelf:'center',
         alignItems:'center',
         borderRadius:20,
         height:300,
@@ -81,7 +83,8 @@ const styles = StyleSheet.create({
         backgroundColor:'#FFFFFF',
         borderColor:"#0C69F1",
         borderWidth:20,
-        objectFit:'scale-down'
+        objectFit:'scale-down',
+        alignSelf:'center'
     },
     lesson:{
         fontSize: 30,
@@ -96,15 +99,22 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         },
     answer:{
+        width:350,
         justifyContent:'center',
         alignContent:'center',
         alignItems:'center',
-        paddingTop:20
+        paddingTop:20,
+        alignSelf:'center',
+        textAlign:'center',
     },
     explain:{
         fontSize: 16,
         fontWeight:'regular',
         color: "#0F1113",
+        alignSelf:'center',
+        justifyContent:'center',
+        alignContent:'center',
+        textAlign:'center',
         },
     img:{
         maxWidth:320,
