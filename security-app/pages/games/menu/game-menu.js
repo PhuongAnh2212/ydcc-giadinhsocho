@@ -8,7 +8,8 @@ const GameMenu = ({ navigation }) => {
   return (
 
     <View style={{
-        paddingTop: 50
+        paddingTop: 50,
+        maxWidth: '100%'
     }}>
         <Text style = {[styles.lesson]}>Game Zone</Text>
         <Text style = {[styles.explain]}>Learn by playing!</Text>
@@ -19,12 +20,12 @@ const GameMenu = ({ navigation }) => {
                 <TouchableOpacity style={styles.gameButton1} onPress={(handleButtonPress) => { navigation.navigate('DragnDrop'); } }>
                     <Image style={styles.image} source={require('../../../assets/gamebuttons/trashgame.png')}/>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.gameButton2} onPress={(handleButtonPress) => { navigation.navigate('WrongResult2'); } }>
+                <TouchableOpacity style={styles.gameButton2} onPress={(handleButtonPress) => { navigation.navigate('Simulation'); } }>
                     <Image style={styles.image} source={require('../../../assets/gamebuttons/scamgame.png')}/>
                 </TouchableOpacity>
         </View>
         <View>
-                <TouchableOpacity style={styles.gameButton1} onPress={(handleButtonPress) => { navigation.navigate('WrongResult2'); } }>
+                <TouchableOpacity style={styles.gameButton1} onPress={(handleButtonPress) => { navigation.navigate('Simulation'); } }>
                     <Image style={[styles.image, {bottom: 90}]} source={require('../../../assets/gamebuttons/callgame.png')}/>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.gameButton2} onPress={(handleButtonPress) => { navigation.navigate('WrongResult2'); } }>
