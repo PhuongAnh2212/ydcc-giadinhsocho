@@ -7,11 +7,9 @@ export default function Onboarding2 ({navigation}) {
         console.log('Button pressed!');
     };    return (
     <><ImageBackground
-          source={require('security-app/assets/onb1.png')}
+          source={require('../../assets/OBBG/OB3.png')}
           style={styles.background} /><View style={styles.container}>
-
-            <Text style={styles.text}>Hi there, you are...</Text>
-
+            
             <Text style={styles.text}>Choose your</Text>
             <Text style={[styles.text, {fontWeight: 'bold' }]}>preferable UI</Text>
             <TouchableOpacity style={styles.button1} onPress={(handleButtonPress) => { navigation.navigate('App'); } }>
@@ -29,7 +27,9 @@ const styles = StyleSheet.create({
     background: {
         flex: 1,
         resizeMode: 'cover',
-        justifyContent: 'center',
+        justifyContent: 'center', 
+        width:420,
+        height: 900
     },
     container: {
         flex: 1,
