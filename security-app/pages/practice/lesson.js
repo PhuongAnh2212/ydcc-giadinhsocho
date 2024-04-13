@@ -17,14 +17,12 @@ const Lesson = ({ navigation }) => {
             <Image style={[styles.img, {top:540}]} source={require('../../assets/gradient.png')}/>
         </View>
         <View style={styles.navigation}>
-            <View style={[styles.button1, {backgroundColor:"#FECE00"}]} onTouchEnd={()=> {navigation.navigate('Flashcard')}}>
-            <AntDesign name="book" size={24} color="white" />
-                <Text style={[styles.text]}>Lesson</Text>
-            </View>
-            <View style={[styles.button1]}>
-                <Entypo name="graduation-cap" size={24} color="white" />
-                <Text style={[styles.text]}>Practice</Text>
-            </View>
+        <View style={[styles.button1, {backgroundColor:"#F27D2D"}]} onTouchEnd={()=> {navigation.navigate('Flashcard')}}>
+            <Text style={[styles.text]}>Lesson</Text>
+        </View>
+        <View style={[styles.button1, {backgroundColor:"#6641C1"}]}>
+            <Text style={[styles.text]}>Practice</Text>
+        </View>
 
         </View>
 

@@ -29,9 +29,9 @@ const Flashcard = ({ navigation }) => {
         <View style={[styles.selectButton,styles.back]} role='button' accessible={true} onTouchEnd={()=>{
             current_tab <= 0? setCurrent_tab(current_tab):setCurrent_tab(current_tab-1)}}>
             <Text style = {[styles.button_des, {
-                color:"#E2698F"
+                color:"#ECC8D3"
             }]}> 
-                Back
+                Previous
             </Text>
             
         </View>
