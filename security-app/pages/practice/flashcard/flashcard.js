@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import FlashcardList from './fc_list/flashcardList'
+import styles from './flashcard.styles';
 
 // *Gets bug* Omg DnD moment (Roll nat 1 on a perception check)
 
@@ -8,29 +9,31 @@ import FlashcardList from './fc_list/flashcardList'
 const Flashcard = ({ navigation }) => {
     const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARD)
   return (
-    <View style={styles.container}>
+    <View style={styles.page_container}> 
 
         {flashcards.map(flashcard => {
-                return <FlashcardList flashcard = {flashcard} key = {flashcard.id}/>
+                return <FlashcardList flashcard = {flashcard} key = {flashcard.id}
+                />
             })}
+        <View role='button' accessible={true}    >
+        <Text> 
+            flip
+        </Text>
         
     </View>
+
+    <View role='button' accessible={true}>
+        <Text> 
+            next
+        </Text>
+        
+    </View>
+
+    </View>
+    
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 2,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  title: {
-    fontSize: 24,
-    marginBottom: 20,
-    color: 'black'
-  },
-});
 
 //Data
 const SAMPLE_FLASHCARD = [

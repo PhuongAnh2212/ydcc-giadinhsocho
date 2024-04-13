@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     elevation: 3,
     backgroundColor: '#006BFF',
-    marginTop: -10,
+    marginTop: 40,
   },
   text: {
     fontSize: 16,

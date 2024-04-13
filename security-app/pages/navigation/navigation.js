@@ -16,6 +16,8 @@ function Navigation() {
         <Stack.Screen name = 'Onboarding1' component={Onboarding1} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = 'Onboarding2' component={Onboarding2} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = 'App' component={MyTabs} options={{headerShown:false, gestureEnabled:false}}/>
+        <Stack.Screen name = "Login" component={Login} options={{headerShown:false, gestureEnabled:false}}/>
+        <Stack.Screen name = "Regist" component={Regist} options={{headerShown:false, gestureEnabled:false}}/>
     </Stack.Navigator>
     
     )
