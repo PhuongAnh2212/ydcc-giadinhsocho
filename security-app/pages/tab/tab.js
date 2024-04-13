@@ -4,6 +4,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Homepage from '../home/home';
 import Leaderboard from '../leaderboard/leaderboard';
 import Flashcard from '../practice/flashcard/flashcard';
+
+import DragnDrop from '../practice/drag and drop game/dnd';
+
+import Login from '../loginnregist/login';
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
