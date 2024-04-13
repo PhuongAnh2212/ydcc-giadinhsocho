@@ -4,14 +4,6 @@ import styles from '../flashcard.styles';
 
 const FlashcardList = ({flashcard}) => {
     const [flip, setFlip] = useState(false)
-    let imgSrc = null
-    for (fl in SAMPLE_FLASHCARD){
-
-    }
-    if(flashcard.img!="" ){
-    imgSrc = SAMPLE_FLASHCARD.img
-
-    }
 
   return (
     <View style= {styles.qna}>
@@ -33,13 +25,13 @@ const FlashcardList = ({flashcard}) => {
 
 const SAMPLE_FLASHCARD = {
   1:{
-      img: require('../../../../assets/pfp/ciumam.jpg')
+      img: require('../../../../assets/answer/1.png')
   },
   2:{
-      img: require('../../../../assets/pfp/coc.jpg')
+      img: require('../../../../assets/answer/2.png')
   },
   3:{
-      img: require('../../../../assets/pfp/dua.jpg')
+      img: require('../../../../assets/answer/1.png')
   }
 }
 

@@ -1,13 +1,25 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+    
     page_container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#EAF7FF',
+    backgroundColor: '#F7FCFF',
     gap:100
     },
+    statusbar:{
+        position:"absolute",
+        // backgroundColor:"#E2698F",
+        top:40,
+        width:"90%",
+        justifyContent: 'center',
+        alignItems: 'center',
+        objectFit:'contain'
+    },
+
+
     navigate:{
         position:'absolute',
         bottom:30,
@@ -20,7 +32,6 @@ const styles = StyleSheet.create({
         height: 70,
         bottom: 0,
         alignSelf: 'center',
-        backgroundColor: '#E2698F',
         color: '#fffff',
         paddingVertical: 12,
         paddingHorizontal: 24,
@@ -42,7 +53,7 @@ const styles = StyleSheet.create({
         position:'absolute',
         flex:1,
         // backgroundColor: '#E2698F',
-        height:500,
+        height:400,
         alignContent:'flex-start',
         justifyContent:'flex-start',
         flexDirection:'column'
@@ -72,6 +83,12 @@ const styles = StyleSheet.create({
         borderWidth:20,
         objectFit:'scale-down'
     },
+    lesson:{
+        fontSize: 30,
+        fontWeight:900,
+        color:'#0C69F1'
+    }
+    ,
     question:{
         fontSize: 45,
         fontWeight:500,
@@ -89,7 +106,7 @@ const styles = StyleSheet.create({
         color: "#0F1113",
         },
     img:{
-        maxWidth:400,
+        maxWidth:320,
         objectFit:'contain'
 
     }
