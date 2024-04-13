@@ -12,7 +12,7 @@ const Tab = createBottomTabNavigator();
 function MyTabs() {
     return (
       <Tab.Navigator >
-            <Tab.Screen name="Homepage" component={Login}/>
+            <Tab.Screen name="Homepage" component={Homepage}/>
             <Tab.Screen name = "Practice" component={DragnDrop} options={{headerShown:false, gestureEnabled:false}}/>
             <Tab.Screen name="Leaderboard" component={Leaderboard} options={{headerShown:false}}/>
       </Tab.Navigator>

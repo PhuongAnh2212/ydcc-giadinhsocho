@@ -4,6 +4,7 @@ import { Image, Text, View } from 'react-native';
 import SignUpButton from "./components/signup-button";
 import TextUsername from "./components/username-input";
 import TextPassword from "./components/password-input";
+import TextConfirmPassword from "./components/confirm-password-input";
 
 function Regist({ navigation }) {
 
@@ -41,21 +42,18 @@ function Regist({ navigation }) {
         </Text>
         <TextUsername/>
         <TextPassword/>
-        <SignButton/>
-        <Text style={{ 
-            fontSize: 14,
-            fontWeight:500,
-            color: '#000000',
-            margin: 2,
-            padding: 50,
-        }} onPress={()=> {navigation.navigate("Regist")}}>
-            Tạo tài khoản mới
-        </Text>
+        <TextConfirmPassword style ={{
+            padding: 30
+        }}/>
+
+        <SignUpButton 
+        onPress={()=> {navigation.navigate("Login")}} />
         <Text style={{ 
             fontSize: 14,
             fontWeight:500,
             color: '#006BFF',
             margin: 2,
+            marginTop: 50,
             padding: 10,
         }}>
             Đăng kí bằng
