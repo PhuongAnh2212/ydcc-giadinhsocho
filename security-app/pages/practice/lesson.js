@@ -12,7 +12,7 @@ const Lesson = ({ navigation }) => {
             <Image style={styles.img} source={require('../../assets/lesson.png')}/>
         </View>
         <View style={styles.img_container}>
-            <Image style={[styles.img, {top:540, transform:"rotateX(180deg)"}]} source={require('../../assets/gradient.png')}/>
+            <Image style={[styles.img, {top:540}]} source={require('../../assets/gradient.png')}/>
         </View>
         <View style={styles.navigation}>
         <View style={[styles.button1, {backgroundColor:"#FECE00"}]} onTouchEnd={()=> {navigation.navigate('Flashcard')}}>

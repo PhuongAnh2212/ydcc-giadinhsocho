@@ -109,6 +109,11 @@ const styles = StyleSheet.create({
         maxWidth:320,
         objectFit:'contain'
 
+    },
+    icon:{
+        position:'absolute',
+        left:0,
+        top:10
     }
 
 });

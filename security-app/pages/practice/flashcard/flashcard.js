@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, Button, Image } from 'react-native';
 import FlashcardList from './fc_list/flashcardList'
 import styles from './flashcard.styles';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 // *Gets bug* Omg DnD moment (Roll nat 1 on a perception check)
 
 const Flashcard = ({ navigation }) => {
@@ -10,7 +11,11 @@ const Flashcard = ({ navigation }) => {
     const [current_tab, setCurrent_tab]= useState(0)
   return (
     <View style={styles.page_container}> 
+
         <View style={styles.statusbar}>
+            <MaterialCommunityIcons name="arrow-left" color={"#0F1113"} size={26} style = {styles.icon} onTouchEnd={()=>{
+                navigation.navigate('App')
+            }}/>
             <Text style = {[styles.explain, {fontSize:20}]}>Lesson</Text>
             <Text style = {styles.lesson}>Fraudulent Scheme</Text>
             <Image style={[styles.img, {maxWidth:390}]} source={require("../../../assets/bars.png")} />

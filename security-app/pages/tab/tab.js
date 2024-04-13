@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 
 function MyTabs() {
     return (
-      <Tab.Navigator >
+      <Tab.Navigator initialRouteName='Homepage'>
             <Tab.Screen name="Homepage" component={Homepage} 
               options={{
                 tabBarLabel: 'Home',
