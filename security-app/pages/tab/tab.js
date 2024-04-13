@@ -14,15 +14,15 @@ const Tab = createBottomTabNavigator();
 function MyTabs() {
     return (
       <Tab.Navigator initialRouteName='Homepage'>
-            <Tab.Screen name="Homepage" component={Homepage} 
+            <Tab.Screen name="Homepage" component={Lesson} 
               options={{
                 tabBarLabel: 'Home',
                 tabBarIcon: ({ color }) => (
-                  <MaterialCommunityIcons name="book-outline" color={color} size={26} />
+                  <MaterialCommunityIcons name="home-variant" color={color} size={26} />
                 ),
                 tabBarShowLabel: false, 
             }}/>
-            <Tab.Screen name = "Practice" component={Lesson} 
+            <Tab.Screen name = "Practice" component={Homepage} 
               options={{headerShown:false, gestureEnabled:false,
               tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="gamepad-variant-outline" color={color} size={26} />
