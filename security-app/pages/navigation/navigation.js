@@ -1,6 +1,6 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import Onboarding from '../onboarding/onboarding';
 import MyTabs from '../tab/tab'
 import Login from '../loginnregist/login';
 import Regist from '../loginnregist/regist';
@@ -12,7 +12,8 @@ const Stack = createNativeStackNavigator();
 
 function Navigation() {
     return(
-    <Stack.Navigator initialRouteName='Login'>
+    <Stack.Navigator initialRouteName='Onboarding'>
+        <Stack.Screen name = "Onboarding" component={Onboarding} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "Login" component={Login} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "Regist" component={Regist} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "App" component={MyTabs} options={{headerShown:false, gestureEnabled:false}}/>
