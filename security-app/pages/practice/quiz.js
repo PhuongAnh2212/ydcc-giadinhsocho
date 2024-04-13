@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Image,  ImageBackground } from 'react-native';
+import { View, Text, TouchableOpacity, Image, TouchableWithoutFeedback, ImageBackground } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from '../practice/flashcard/flashcard.styles';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 // *Gets bug* Omg DnD moment (Roll nat 1 on a perception check)
 
@@ -24,26 +25,29 @@ const Quiz = ({ navigation }) => {
             source={SAMPLE_QUIZ[current_tab].image}
             style={styles.backgroundQuiz} />
         
-        <TouchableOpacity style={styles.quizButton1} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
+        <TouchableOpacity style={styles.quizButton1} onPress={(handleButtonPress) => { navigation.navigate('Result'); } }>
+            <FontAwesome5 name="facebook" size={24} color="#0950F4" />
             <Text style={[styles.quizText]}>
                 {SAMPLE_QUIZ[current_tab].answer[0]}
             </Text>
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.quizButton2} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
+        <TouchableOpacity style={styles.quizButton2} onPress={(handleButtonPress) => { navigation.navigate('WrongResult1'); } }>
+            <FontAwesome5 name="facebook" size={24} color="#0950F4" />
             <Text style={[styles.quizText]}>
                 {SAMPLE_QUIZ[current_tab].answer[1]}
             </Text>
         </TouchableOpacity>
 
         
-        <TouchableOpacity style={styles.quizButton3} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
+        <TouchableOpacity style={styles.quizButton3} onPress={(handleButtonPress) => { navigation.navigate('WrongResult2'); } }>
+            <FontAwesome5 name="facebook" size={24} color="#0950F4" />
             <Text style={[styles.quizText]}>
                 {SAMPLE_QUIZ[current_tab].answer[2]}
             </Text>
         </TouchableOpacity>
-
-        <View style={styles.navigate}>
+{/* 
+    <View style={styles.navigate}>
         <View style={[styles.selectButton,styles.back]} role='button' accessible={true} onTouchEnd={()=>{
             current_tab <= 0? setCurrent_tab(current_tab):setCurrent_tab(current_tab-1)}}>
             <Text style = {[styles.button_des, {
@@ -62,7 +66,7 @@ const Quiz = ({ navigation }) => {
         </Text>
         </View>
 
-    </View>
+    </View> */}
 
     </View>
     
@@ -75,7 +79,7 @@ export const SAMPLE_QUIZ = [
     {
         id: 1,
         question: 'Be Cautious with Email Links',
-        answer: ['meo1','meo2','meo3'],
+        answer: ['facebook','faceboook','sacebook'],
         image: require('../../assets/quiz-answer/quiz.png')
     },
     {
