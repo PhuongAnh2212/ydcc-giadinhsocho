@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         backgroundColor:"#E2698F",
         },
     button_des: {
-      fontSize: 30,
+      fontSize: 24,
       fontWeight:500,
     },
     qna:{
