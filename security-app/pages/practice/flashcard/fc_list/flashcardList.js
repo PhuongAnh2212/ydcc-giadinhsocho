@@ -15,8 +15,6 @@ const FlashcardList = ({flashcard}) => {
         }
     </View>
 
-    <Text>meomeo</Text>
-
     <View style={styles.answer} role='tab' accessible={true}>
         <Text style = {styles.explain}>
         {flip? flashcard.answer:" "}
@@ -34,7 +32,7 @@ const SAMPLE_FLASHCARD = {
       img: require('../../../../assets/answer/2.png')
   },
   3:{
-      img: require('../../../../assets/answer/3.jpg')
+      img: require('../../../../assets/answer/1.png')
   }
 }
 

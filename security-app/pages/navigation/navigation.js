@@ -7,7 +7,6 @@ import Onboarding2 from '../onboarding/onboarding2';
 import Login from '../loginnregist/login';
 import Regist from '../loginnregist/regist'
 import MyTabs from '../tab/tab'
-import Community from '../community/community';
 import Flashcard from '../practice/flashcard/flashcard';
 import Lesson from '../practice/lesson';
 import Quiz from '../practice/quiz';
@@ -35,6 +34,9 @@ function Navigation() {
         <Stack.Screen name = "Result" component={Result} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "WrongResult1" component={WrongResult1} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "WrongResult2" component={WrongResult2} options={{headerShown:false, gestureEnabled:false}}/>
+        <Stack.Screen name = "Leaderboard" component={Leaderboard} options={{headerShown:false, gestureEnabled:false}}/>
+        <Stack.Screen name = "Community" component={Commnunity} options={{headerShown:false, gestureEnabled:false}}/>
+
     </Stack.Navigator>
     
     )
