@@ -11,7 +11,7 @@ export default function Onboarding2 ({navigation}) {
           style={styles.background} /><View style={styles.container}>
             <Text style={styles.text}>Choose your</Text>
             <Text style={[styles.text, {fontWeight: 'bold' }]}>preferable UI</Text>
-            <TouchableOpacity style={styles.button1} onPress={(handleButtonPress) => { navigation.navigate('Homepage'); } }>
+            <TouchableOpacity style={styles.button1} onPress={(handleButtonPress) => { navigation.navigate('App'); } }>
                     <Text style={[styles.buttonText1, { color: '#FFFFFF', fontWeight: 'bold' }]}>Next</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button2} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
