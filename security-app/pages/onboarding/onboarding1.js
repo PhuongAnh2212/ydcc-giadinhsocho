@@ -1,6 +1,7 @@
 // Import necessary dependencies from React and React Native
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
+import LottieView from 'lottie-react-native';
 
 // Define your functional component
 function Onboarding1 ({navigation}) {
@@ -13,13 +14,19 @@ function Onboarding1 ({navigation}) {
             source={require('../../assets/OBBG/OB2.png')}
             style={styles.background} /><View style={styles.container}>
                 <Text style={styles.text}>Do you want to</Text>
+                <LottieView
+                    style={styles.animation}
+                    source={require('../../assets/ob.json')}
+                    autoPlay
+                    loop
+                />
                 <Text style={[styles.text, {fontWeight: 'bold' }]}>receive surprise content?</Text>
 
                 <TouchableOpacity style={styles.button1} onPress={(handleButtonPress) => { navigation.navigate('Onboarding2'); } }>
-                    <Text style={[styles.buttonText1, { color: '#FFFFFF', fontWeight: 'bold', fontSize:20 }]}>Next</Text>
+                    <Text style={[styles.buttonText1, { color: '#FFFFFF', fontWeight: 'bold', fontSize:20 }]}>Yes</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button2} onPress={(handleButtonPress) => { navigation.navigate('Onboarding'); } }>
-                    <Text style={[styles.buttonText1, { color: '#E2698F', fontWeight: 'bold', fontSize:20 }]}>Back</Text>
+                    <Text style={[styles.buttonText1, { color: '#FFFFFF', fontWeight: 'bold', fontSize:20 }]}>No</Text>
                 </TouchableOpacity>
             </View></>
 
@@ -40,7 +47,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#0950F4',
     },
+    animation: {
+        right: 30,
+        bottom: 200,
+        width: '100%',
+      },
     text: {
+        bottom: 550,
         fontSize: 24,
         textAlign: 'left',
         fontWeight: 'regular',
@@ -49,11 +62,11 @@ const styles = StyleSheet.create({
     button1: {
         position: 'absolute',
         width: 180,
-        height: 70,
+        height: 180,
         bottom: 60,
         right: 15,
         alignSelf: 'center',
-        backgroundColor: '#E2698F',
+        backgroundColor: '#00CF66',
         color: '#fffff',
         paddingVertical: 12,
         paddingHorizontal: 24,
@@ -64,11 +77,11 @@ const styles = StyleSheet.create({
       button2: {
         position: 'absolute',
         width: 180,
-        height: 70,
+        height: 180,
         bottom: 60,
         left: 15,
         alignSelf: 'center',
-        backgroundColor: '#F5B4C8',
+        backgroundColor: '#FF7373',
         color: '#fffff',
         paddingVertical: 12,
         paddingHorizontal: 24,
