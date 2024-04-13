@@ -51,7 +51,7 @@ function Login({ navigation }) {
         }}>
             Quên mật khẩu?
         </Text>
-        <SignButton/>
+        <SignButton onPress={()=> {navigation.navigate('App')}}  />
         <Text style={{ 
             fontSize: 14,
             fontWeight:500,
