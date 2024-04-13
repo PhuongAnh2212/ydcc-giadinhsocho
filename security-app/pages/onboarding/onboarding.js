@@ -20,7 +20,7 @@ export default function Onboarding({navigation}) {
                     <Text style={[styles.buttonmainText, { color: '#FFFFFF', fontWeight: 'bold'}]}>Middle-age</Text>
                 </TouchableOpacity>
             </View></>
-
+            )
 };
 
 
