@@ -15,6 +15,8 @@ import WrongResult1 from '../practice/result/wrong-answer1';
 import WrongResult2 from '../practice/result/wrong-answer2';
 import Commnunity from '../community/community';
 import Leaderboard from '../leaderboard/leaderboard';
+import GameMenu from '../games/menu/game-menu';
+import DragnDrop from '../games/drag and drop game/dnd';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +38,8 @@ function Navigation() {
         <Stack.Screen name = "WrongResult2" component={WrongResult2} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "Leaderboard" component={Leaderboard} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "Community" component={Commnunity} options={{headerShown:false, gestureEnabled:false}}/>
+        <Stack.Screen name = "GameMenu" component={GameMenu} options={{headerShown:false, gestureEnabled:false}}/>
+        <Stack.Screen name = "DragnDrop" component={DragnDrop} options={{headerShown:false, gestureEnabled:false}}/>
 
     </Stack.Navigator>
     
