@@ -1,10 +1,13 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import Onboarding from '../onboarding/onboarding';
-import MyTabs from '../tab/tab'
-import DragnDrop from '../practice/drag and drop game/dnd';
 import Onboarding1 from '../onboarding/onboarding1';
 import Onboarding2 from '../onboarding/onboarding2';
+import Login from '../loginnregist/login';
+import Regist from '../loginnregist/regist'
+import MyTabs from '../tab/tab'
+import DragnDrop from '../practice/drag and drop game/dnd';
 
 const Stack = createNativeStackNavigator();
 
