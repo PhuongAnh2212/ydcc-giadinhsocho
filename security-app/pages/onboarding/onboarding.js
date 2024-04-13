@@ -34,7 +34,6 @@ export default function Onboarding({navigation}) {
                     />
                     <Text style={[styles.buttonmainText, { color: '#FFFFFF', fontWeight: 'bold', fontSize: 20, top:10}]}>Young adult</Text>
                 </TouchableOpacity>
-
                 <TouchableOpacity style={styles.buttonmain3} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
                     {/* <Ionicons name="settings-helper" size={32} color="white" /> */}
                     <MaterialCommunityIcons name="settings-helper" size={60} color="white" />

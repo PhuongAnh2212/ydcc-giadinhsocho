@@ -6,14 +6,14 @@ import Homepage from '../home/home';
 import Leaderboard from '../leaderboard/leaderboard';
 import Flashcard from '../practice/flashcard/flashcard';
 import Setting from '../settings/settings';
-
+import Lesson from '../practice/lesson';
 import DragnDrop from '../practice/drag and drop game/dnd';
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
     return (
-      <Tab.Navigator >
+      <Tab.Navigator initialRouteName='Homepage'>
             <Tab.Screen name="Homepage" component={Homepage} 
               options={{
                 tabBarLabel: 'Home',
@@ -22,7 +22,7 @@ function MyTabs() {
                 ),
                 tabBarShowLabel: false, 
             }}/>
-            <Tab.Screen name = "Practice" component={Flashcard} 
+            <Tab.Screen name = "Practice" component={Lesson} 
               options={{headerShown:false, gestureEnabled:false,
               tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="gamepad-variant-outline" color={color} size={26} />

@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     statusbar:{
         position:"absolute",
         // backgroundColor:"#E2698F",
-        top:40,
+        top:55,
         width:"90%",
         justifyContent: 'center',
         alignItems: 'center',
@@ -40,14 +40,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     back:{
-        backgroundColor:"#FECE00",
+        backgroundColor:"#ECC8D3",
     },
     next:{
         backgroundColor:"#E2698F",
         },
     button_des: {
-      fontSize: 24,
-      fontWeight:500,
+      fontSize: 20,
+      fontWeight:'bold',
     },
     qna:{
         position:'absolute',
@@ -90,9 +90,10 @@ const styles = StyleSheet.create({
     }
     ,
     question:{
-        fontSize: 45,
-        fontWeight:500,
+        fontSize: 28,
+        fontWeight: 'bold',
         color: "#FFFFFF",
+        textAlign: 'center',
         },
     answer:{
         justifyContent:'center',
@@ -101,14 +102,19 @@ const styles = StyleSheet.create({
         paddingTop:20
     },
     explain:{
-        fontSize: 30,
-        fontWeight:500,
+        fontSize: 16,
+        fontWeight:'regular',
         color: "#0F1113",
         },
     img:{
         maxWidth:320,
         objectFit:'contain'
 
+    },
+    icon:{
+        position:'absolute',
+        left:0,
+        top:10
     }
 
 });
