@@ -16,8 +16,8 @@ const Flashcard = ({ navigation }) => {
             <MaterialCommunityIcons name="arrow-left" color={"#0F1113"} size={26} style = {styles.icon} onTouchEnd={()=>{
                 navigation.navigate('App')
             }}/>
-            <Text style = {[styles.explain, {fontSize:20}]}>Lesson</Text>
-            <Text style = {styles.lesson}>Fraudulent Scheme</Text>
+            <Text style = {[styles.explain, {fontSize:14, paddingBottom: 5}]}>Lesson</Text>
+            <Text style = {[styles.lesson, {fontSize:18, paddingBottom: 20}]}>Fraudulent Scheme</Text>
             <Image style={[styles.img, {maxWidth:390}]} source={require("../../../assets/bars.png")} />
         </View>
 
@@ -29,7 +29,7 @@ const Flashcard = ({ navigation }) => {
         <View style={[styles.selectButton,styles.back]} role='button' accessible={true} onTouchEnd={()=>{
             current_tab <= 0? setCurrent_tab(current_tab):setCurrent_tab(current_tab-1)}}>
             <Text style = {[styles.button_des, {
-                color:"#FF7F1E"
+                color:"#E2698F"
             }]}> 
                 Back
             </Text>
@@ -56,8 +56,8 @@ const Flashcard = ({ navigation }) => {
 export const SAMPLE_FLASHCARD = [
     {
         id: 1,
-        question: 'Hỏi đi',
-        answer: 'dap an',
+        question: 'Be Cautious with Email Links',
+        answer: 'Clicking on links in emails can lead to fake phishing websites or malicious sites set up by hackers.',
     },
     {
         id: 2,
