@@ -1,29 +1,47 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, Button, Image } from 'react-native';
-import FlashcardList from './fc_list/flashcardList'
-import styles from './flashcard.styles';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { View, Text, TouchableOpacity, Image,  ImageBackground } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import styles from '../practice/flashcard/flashcard.styles';
+
 // *Gets bug* Omg DnD moment (Roll nat 1 on a perception check)
 
 const Quiz = ({ navigation }) => {
-    const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARD)
+    const [quiz, setFlashcards] = useState(SAMPLE_QUIZ)
     const [current_tab, setCurrent_tab]= useState(0)
   return (
     <View style={styles.page_container}> 
-
+        {/* key = {answer[current_tab].id} */}
         <View style={styles.statusbar}>
             <MaterialCommunityIcons name="arrow-left" color={"#0F1113"} size={26} style = {styles.icon} onTouchEnd={()=>{
                 navigation.navigate('App')
             }}/>
             <Text style = {[styles.explain, {fontSize:14, paddingBottom: 5}]}>Lesson</Text>
             <Text style = {[styles.lesson, {fontSize:18, paddingBottom: 20}]}>Fraudulent Scheme</Text>
-            <Image style={[styles.img, {maxWidth:390}]} source={require("../../../assets/bars.png")} />
+            <Image style={[styles.img, {maxWidth:390}]} source={require("../../assets/bars.png")} />
         </View>
 
+        <ImageBackground
+            source={SAMPLE_QUIZ[current_tab].image}
+            style={styles.backgroundQuiz} />
+        
+        <TouchableOpacity style={styles.quizButton1} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
+            <Text style={[styles.quizText]}>
+                {SAMPLE_QUIZ[current_tab].answer[0]}
+            </Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity style={styles.quizButton2} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
+            <Text style={[styles.quizText]}>
+                {SAMPLE_QUIZ[current_tab].answer[1]}
+            </Text>
+        </TouchableOpacity>
 
-        <FlashcardList flashcard = {flashcards[current_tab]} key = {flashcards[current_tab].id}/>
-
+        
+        <TouchableOpacity style={styles.quizButton3} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
+            <Text style={[styles.quizText]}>
+                {SAMPLE_QUIZ[current_tab].answer[2]}
+            </Text>
+        </TouchableOpacity>
 
         <View style={styles.navigate}>
         <View style={[styles.selectButton,styles.back]} role='button' accessible={true} onTouchEnd={()=>{
@@ -36,7 +54,7 @@ const Quiz = ({ navigation }) => {
             
         </View>
         <View style={[styles.selectButton,styles.next]} role='button' accessible={true} onTouchEnd={()=>{
-            current_tab >= flashcards.length-1? setCurrent_tab(current_tab):setCurrent_tab(current_tab+1)}}>
+            current_tab >= quiz.length-1? setCurrent_tab(current_tab):setCurrent_tab(current_tab+1)}}>
         <Text style={[styles.button_des, {
                 color:"#FFFFFF"
             }]}> 
@@ -53,21 +71,25 @@ const Quiz = ({ navigation }) => {
 
 
 //Data
-export const SAMPLE_FLASHCARD = [
+export const SAMPLE_QUIZ = [
     {
         id: 1,
         question: 'Be Cautious with Email Links',
-        answer: 'Clicking on links in emails can lead to fake phishing websites or malicious sites set up by hackers.',
+        answer: ['meo1','meo2','meo3'],
+        image: require('../../assets/quiz-answer/quiz.png')
     },
     {
         id: 2,
         question: 'Hỏi đi 2',
-        answer: 'dap an 2',
+        answer: ['ang1','ang2','ang3'],
+        image: require('../../assets/quiz-answer/quiz.png')
     },
     {
         id: 3,
         question: 'Hỏi đi 3',
-        answer: 'dap an 3',
+        answer: ['aaa','aaaa','aaaaa'],
+        image: require('../../assets/quiz-answer/quiz.png')
     }
 ]
 export default Quiz;
+

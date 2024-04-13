@@ -7,8 +7,8 @@ import Leaderboard from '../leaderboard/leaderboard';
 // import Flashcard from '../practice/flashcard/flashcard';
 // import Setting from '../settings/settings';
 import Lesson from '../practice/lesson';
-// import DragnDrop from '../games/drag and drop game/dnd';
-import Quiz from '../practice/lesson';
+import DragnDrop from '../games/drag and drop game/dnd';
+import Quiz from '../practice/quiz';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,13 +17,14 @@ function MyTabs() {
       <Tab.Navigator initialRouteName='Homepage'>
             <Tab.Screen name="Lesson" component={Lesson} 
               options={{
+                headerShown:false,
                 tabBarLabel: 'Home',
                 tabBarIcon: ({ color }) => (
                   <MaterialCommunityIcons name="home-variant" color={color} size={26} />
                 ),
                 tabBarShowLabel: false, 
             }}/>
-            <Tab.Screen name = "Practice" component={Quiz} 
+            <Tab.Screen name = "Practice" component={DragnDrop} 
               options={{headerShown:false, gestureEnabled:false,
               tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="gamepad-variant-outline" color={color} size={26} />

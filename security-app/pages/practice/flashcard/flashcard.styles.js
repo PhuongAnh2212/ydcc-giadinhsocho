@@ -125,6 +125,63 @@ const styles = StyleSheet.create({
         position:'absolute',
         left:0,
         top:10
+    },
+
+    quizButton1: {
+        position: 'absolute',
+        width: 350,
+        height: 70,
+        bottom: 330,
+        left: 30,
+        alignSelf: 'center',
+        backgroundColor: '#DEEFFF',
+        color: 'black',
+        paddingVertical: 12,
+        paddingHorizontal: 24,
+        borderRadius: 12,
+        alignItems: 'center', // Center text horizontally
+        justifyContent: 'center',
+    },
+    quizButton2: {
+        position: 'absolute',
+        width: 350,
+        height: 70,
+        bottom: 250,
+        left: 30,
+        alignSelf: 'center',
+        backgroundColor: '#DEEFFF',
+        color: 'black',
+        paddingVertical: 12,
+        paddingHorizontal: 24,
+        borderRadius: 12,
+        alignItems: 'center', // Center text horizontally
+        justifyContent: 'center',
+    },
+    quizButton3: {
+        position: 'absolute',
+        width: 350,
+        height: 70,
+        bottom: 170,
+        left: 30,
+        alignSelf: 'center',
+        backgroundColor: '#DEEFFF',
+        color: 'black',
+        paddingVertical: 12,
+        paddingHorizontal: 24,
+        borderRadius: 12,
+        alignItems: 'center', // Center text horizontally
+        justifyContent: 'center',
+    },
+    quizText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    backgroundQuiz: {
+        flex: 1,
+        resizeMode: 'cover',
+        justifyContent: 'center', 
+        width:420,
+        height: 900
     }
 
 });
