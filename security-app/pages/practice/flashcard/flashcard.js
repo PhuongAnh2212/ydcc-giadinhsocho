@@ -61,13 +61,13 @@ export const SAMPLE_FLASHCARD = [
     },
     {
         id: 2,
-        question: 'Hỏi đi 2',
-        answer: 'dap an 2',
+        question: 'Be Careful with Email Attachments',
+        answer: 'Malicious code and viruses can be hidden in email attachments. Do not download attachments immediately, always scan them for viruses first.',
     },
     {
         id: 3,
-        question: 'Hỏi đi 3',
-        answer: 'dap an 3',
+        question: 'Beware of Spam Messages',
+        answer: 'Similar to spam emails, spam messages (sms spam) can be used to scam users. Exercise caution when receiving unexpected messages with offers or links.'
     }
 ]
 export default Flashcard;
