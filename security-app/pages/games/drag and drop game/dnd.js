@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text, Button, Animated, ImageBackground } from 'react-native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+// import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { styles } from './dnd.module';
 import Dragable from './dragable'
 
@@ -31,6 +32,13 @@ const DragnDrop = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <MaterialCommunityIcons name="arrow-left" color={"#0F1113"} size={26} style = {{
+          left:20, 
+          position: 'absolute',
+          top: 30}} 
+          onTouchEnd={()=>{
+                navigation.goBack()
+            }}/>
       
       <View>
         {
