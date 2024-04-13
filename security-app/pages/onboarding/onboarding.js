@@ -12,9 +12,9 @@ export default function Onboarding({navigation}) {
             source={require('../../assets/OBBG/OB1.png')}
             style={styles.background} /><View style={styles.container}>
                 <Text style={styles.text}>Hi there, you are...</Text>
-                <TouchableOpacity style={styles.button1} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }> 
+                {/* <TouchableOpacity style={styles.button1} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }> 
                         <Text style={[styles.buttonText1, { color: '#FFFFFF', fontWeight: 'bold', fontSize:20 }]}>Next</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             
                 <TouchableOpacity style={styles.buttonmain1} onPress={(handleButtonPress) => { navigation.navigate('Onboarding1'); } }>
                 {/* <Ionicons name="md-checkmark-circle" size={32} color="green" /> */}

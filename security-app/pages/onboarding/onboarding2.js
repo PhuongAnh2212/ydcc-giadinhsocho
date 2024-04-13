@@ -16,23 +16,27 @@ export default function Onboarding2 ({navigation}) {
             <TouchableOpacity style={styles.buttonmain1} onPress={(handleButtonPress) => { navigation.navigate('App'); } }>
                 {/* <Ionicons name="md-checkmark-circle" size={32} color="green" /> */}
                 <Image  //ảnh ava người dùng
-                    style={styles.icon}
-                    source={require('../../assets/demographic-icon/old.png')}
+                    style={styles.icon2}
+                    source={require('../../assets/eye.png')}
                 />
-                    <Text style={[styles.buttonmainText, { color: '#FFFFFF', fontWeight: 'bold', fontSize: 20, top:10}]}>Middle-age</Text>
+                    <Text style={[styles.buttonmainText, { color: '#0C69F1', fontWeight: 'bold', fontSize: 18, top:20, textAlign:'center' }]}>Visual Impairments</Text>
                 </TouchableOpacity>
 
             <TouchableOpacity style={styles.buttonmain2} onPress={(handleButtonPress) => { navigation.navigate('App'); } }>
                 {/* <Ionicons name="md-checkmark-circle" size={32} color="green" /> */}
                     <Image  //ảnh ava người dùng
-                        style={styles.icon}
-                        source={require('../../assets/demographic-icon/young.png')}
+                        style={styles.icon1}
+                        source={require('../../assets/hearing.png')}
                     />
-                    <Text style={[styles.buttonmainText, { color: '#FFFFFF', fontWeight: 'bold', fontSize: 20, top:10}]}>Young adult</Text>
+                    <Text style={[styles.buttonmainText, { color: '#0C69F1', fontWeight: 'bold', fontSize: 18, top:10, textAlign:'center' }]}>Hearing Loss</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttonmain3} onPress={(handleButtonPress) => { navigation.navigate('App'); } }>
                     {/* <Ionicons name="settings-helper" size={32} color="white" /> */}
-                    <Text style={[styles.buttonmainText, { color: '#FFFFFF', fontWeight: 'bold', fontSize: 20, top:10}]}>Others</Text>
+                    <Text style={[styles.buttonmainText, { color: '#0C69F1', fontWeight: 'bold', fontSize: 20, textAlign:'center', top:10}]}>I am healthy</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonmain4} onPress={(handleButtonPress) => { navigation.navigate('App'); } }>
+                    {/* <Ionicons name="settings-helper" size={32} color="white" /> */}
+                    <Text style={[styles.buttonmainText, { color: '#0C69F1', fontWeight: 'bold', fontSize: 20, top:10}]}>Others</Text>
                 </TouchableOpacity>
 
           </View></>
@@ -56,9 +60,10 @@ const styles = StyleSheet.create({
     text: {
         bottom: 550,
         fontSize: 24,
-        textAlign: 'left',
+        textAlign: 'center',
         fontWeight: 'regular',
         color: '#fff'
+
     },
     buttonmain1: {
         position: 'absolute',
@@ -67,7 +72,7 @@ const styles = StyleSheet.create({
         bottom: 450,
         left: 30,
         alignSelf: 'center',
-        backgroundColor: '#8974E9',
+        backgroundColor: '#EAF7FF',
         color: '#fffff',
         paddingVertical: 12,
         paddingHorizontal: 24,
@@ -84,7 +89,7 @@ const styles = StyleSheet.create({
         bottom: 450,
         left: 215,
         alignSelf: 'center',
-        backgroundColor: '#F27D2D',
+        backgroundColor: '#EAF7FF',
         color: '#fffff',
         paddingVertical: 12,
         paddingHorizontal: 24,
@@ -97,16 +102,29 @@ const styles = StyleSheet.create({
         width: 170,
         height: 230,
         bottom: 200,
-        left: 120,
+        left: 30,
         alignSelf: 'center',
-        backgroundColor: '#A6D934',
+        backgroundColor: '#EAF7FF',
+        paddingVertical: 12,
+        paddingHorizontal: 24,
+        borderRadius: 8,
+        alignItems: 'center', // Center text horizontally
+        justifyContent: 'center',
+    },
+    buttonmain4: {
+        position: 'absolute',
+        width: 170,
+        height: 230,
+        bottom: 200,
+        left: 215,
+        alignSelf: 'center',
+        backgroundColor: '#EAF7FF',
         color: '#fffff',
         paddingVertical: 12,
         paddingHorizontal: 24,
         borderRadius: 8,
         alignItems: 'center', // Center text horizontally
         justifyContent: 'center',
-
     },
     button1: {
         position: 'absolute',
@@ -138,4 +156,12 @@ const styles = StyleSheet.create({
         alignItems: 'center', // Center text horizontally
         justifyContent: 'center',
       },
+    icon1: {
+        width: 63,
+        height: 80,
+    },
+    icon2: {
+        width: 100,
+        height: 68,
+    }
 });
