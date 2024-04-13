@@ -9,6 +9,7 @@ import Dragable from './dragable'
 const DragnDrop = ({ navigation }) => {
     const [pts, setPts] = useState(0)
     const [isActive, setisActive] = useState(1)
+    const [end, setend] = useState(false)
     const [used_ID, setUsed_ID] = useState(new Set())
     const [dragging, setDragging] = useState(false)
     const random_num = ()=>{
@@ -25,12 +26,19 @@ const DragnDrop = ({ navigation }) => {
       setisActive(isActive+1)
     }
     
-    
+    useEffect(()=>{
+      if(pts > 4){
+        setPts(4);
+        setend(true)
+      }
+    },[pts])
     
     
     return (
     <View style={styles.container}>
-      <Text style={styles.title}>{pts}</Text>
+      <View style = {styles.boder}>
+      <Text style={[styles.title, {color:"#FFFFFF"}]}>{pts}</Text>
+      </View>
       
       <View>
         {
@@ -48,6 +56,14 @@ const DragnDrop = ({ navigation }) => {
           style={styles.buttonBackground}
           imageStyle={styles.imageStyle}
         />
+        {end? <View style = {styles.button1} onTouchEnd={()=>{
+          setPts(0);
+          used_ID.clear();
+          setisActive(1);
+          setend(false);
+          navigation.navigate('App')
+
+        }}><Text style={[styles.title,  {color:"#FFFFFF"}]}>Retry</Text></View> : null}
     </View>
   );
 };
