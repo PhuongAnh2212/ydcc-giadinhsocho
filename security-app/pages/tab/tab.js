@@ -7,7 +7,7 @@ import Leaderboard from '../leaderboard/leaderboard';
 import Flashcard from '../practice/flashcard/flashcard';
 import Setting from '../settings/settings';
 import Lesson from '../practice/lesson';
-import DragnDrop from '../practice/drag and drop game/dnd';
+import DragnDrop from '../games/drag and drop game/dnd';
 
 const Tab = createBottomTabNavigator();
 
