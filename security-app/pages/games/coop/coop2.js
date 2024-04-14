@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 import HighlightText from '@sanar/react-native-highlight-text';
 
 
-const Coop = ({ navigation }) => {
+const Coop2 = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
@@ -12,7 +12,7 @@ const Coop = ({ navigation }) => {
         <View style={{
             width: 350,
             height: 550,
-            backgroundColor: '#ded5f1',
+            backgroundColor: '#ECC8D3',
             borderRadius: 16,
             padding: 20,
             bottom: 20
@@ -21,11 +21,25 @@ const Coop = ({ navigation }) => {
                 borderColor: 'black',
                 borderWidth:1,
                 borderRadius: 16,
-                width: 140,
-                height: 40,
+                width: 240,
+                height: 30,
                 backgroundColor: 'white',
-                left: 10,
-                bottom: 25,
+                left: 15,
+                top:312,
+                position: 'absolute',
+                
+            }}>
+
+        </View>
+        <View style={{
+                borderColor: 'black',
+                borderWidth:1,
+                borderRadius: 16,
+                width: 170,
+                height: 30,
+                backgroundColor: 'white',
+                left: 13,
+                bottom:9,
                 position: 'absolute',
                 
             }}>
@@ -34,58 +48,49 @@ const Coop = ({ navigation }) => {
             <Text style ={{
                 fontSize: 15
             }}>
-            {/* Subject: Important Update: Your Account Requires Immediate Attention {'\n'}
-            {'\n'} */}
+            Subject: Important Update: Your Account ██████████ {'\n'}
+            {'\n'}
             
-            Subject: Important Update: Your ███ Requires Immediate Attention {'\n'}
+            {/* Subject: Important Update: Your ███ Requires Immediate Attention {'\n'}
+            {'\n'} */}
+
+            {/* Dear ████ {'\n'} */}
+            Dear John Smith, {'\n'}
             {'\n'}
 
-            Dear ████ {'\n'}
-            {/* Dear John Smith, {'\n'} */}
-            {'\n'}
+            {/* We've noticed some unusual login attempts on your ███. To secure your account and prevent unauthorized access, we require your immediate action.{'\n'} */}
 
-            We've noticed some unusual login attempts on your ███. To secure your account and prevent unauthorized access, we require your immediate action.{'\n'}
+            We've noticed some unusual login attempts on your Vietcombank account. To █████ and ███████████, we require your immediate action.{'\n'}
 
-            {/* We've noticed some unusual login attempts on your Vietcombank account. To secure your account and prevent unauthorized access, we require your immediate action.{'\n'} */}
-
-            Please review the recent activity and confirm or deny these actions:{'\n'}
+            Please ███ the recent activity and confirm or deny these actions: 
             
             </Text>
-
-            <View style={{
-                borderColor: 'black',
-                borderWidth:1,
-                borderRadius: 16,
-                width: 215,
-                backgroundColor: 'white',
-                left: -5,
-                bottom: 10,
-                
-            }}
-            >
-                <Text style={{
+             <Text style={{
                     color: 'blue',
                     left: 5,
                     top:7,
-                    
-                textDecorationLine: 'underline'
+                    textDecorationLine: 'underline'
                 }}>
                     [Review Recent Activity Button]{'\n'}
-                </Text>
-            </View>
+            </Text>
             <Text>
-            █████████████████████████████████████████████████████████████████████████████████████ {'\n'}{'\n'}
-            {/* If you did not attempt to access your account, please click on the link below to secure your account immediately:{'\n'}
-            [Secure My Account Now Button]{'\n'}{'\n'} */}
-
-            Note: Ignoring this message may result in temporary suspension of your account.{'\n'}{'\n'}
+            {/* █████████████████████████████████████████████████████████████████████████████████████ {'\n'}{'\n'} */}
+            If you did not attempt to access your account, please click on the link below to secure your account immediately:{'\n'}
+            <Text style={{
+                color: "blue",
+                textDecorationLine: 'underline'
+            }}>
+                {'\n'}[Click here to secure your account]{'\n'}{'\n'}
+            </Text>
+            Note: Ignoring this message may result in ██████████.{'\n'}{'\n'}
 
             Thank you for choosing VCB and helping us keep your account safe.{'\n'}{'\n'}
 
             Warm Regards,{'\n'}{'\n'}
-            VCB Support Team{'\n'}
-            0982319273{'\n'}
+            VCB Support Team{'\n'}{'\n'}
+            John.Smith@gmail.com{'\n'}
             </Text>
+            
         </View>
         <TouchableOpacity style={styles.button} onPress={(handleButtonPress) => { navigation.navigate('Simulation'); } }>
             <Text style={[styles.buttonmainText, { color: 'white', 
@@ -136,4 +141,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Coop;
+export default Coop2;

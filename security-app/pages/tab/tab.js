@@ -9,6 +9,7 @@ import Leaderboard from '../leaderboard/leaderboard';
 import Lesson from '../practice/lesson';
 import GameMenu from '../games/menu/game-menu';
 import Coop from '../games/coop/coop';
+// import Coop2 from '../games/coop/coop2';
 
 const Tab = createBottomTabNavigator();
 
