@@ -18,6 +18,7 @@ import Leaderboard from '../leaderboard/leaderboard';
 import GameMenu from '../games/menu/game-menu';
 import DragnDrop from '../games/drag and drop game/dnd';
 import Simulation from '../games/simulation/simulation';
+import Coop from '../games/coop/coop';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +43,7 @@ function Navigation() {
         <Stack.Screen name = "GameMenu" component={GameMenu} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "DragnDrop" component={DragnDrop} options={{headerShown:false, gestureEnabled:false}}/>
         <Stack.Screen name = "Simulation" component={Simulation} options={{headerShown:false, gestureEnabled:false}}/>
+        <Stack.Screen name = "Coop" component={Coop} options={{headerShown:false, gestureEnabled:false}}/>
 
     </Stack.Navigator>
     
