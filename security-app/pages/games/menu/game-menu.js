@@ -10,6 +10,7 @@ function GameMenu ({navigation})  {
     <View style={{
         paddingTop: 50,
         maxWidth: '100%'
+
     }}>
 
         <Text style = {[styles.lesson]}>Game Zone</Text>

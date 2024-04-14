@@ -92,7 +92,7 @@ const Coop2 = ({ navigation }) => {
             </Text>
             
         </View>
-        <TouchableOpacity style={styles.button} onPress={(handleButtonPress) => { navigation.navigate('Simulation'); } }>
+        <TouchableOpacity style={styles.button} onPress={(handleButtonPress) => { navigation.navigate('Onboarding'); } }>
             <Text style={[styles.buttonmainText, { color: 'white', 
                         fontWeight: 'bold', 
                         fontSize: 20, 

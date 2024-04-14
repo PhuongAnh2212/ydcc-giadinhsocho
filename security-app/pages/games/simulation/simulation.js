@@ -10,6 +10,7 @@ const Simulation = ({ navigation }) => {
 
     <View style={{
         // width:'100%'
+
     }}
     >
         <ImageBackground
@@ -21,10 +22,14 @@ const Simulation = ({ navigation }) => {
             onPress={() => {
                 current_tab >= SIMULATION.length-1?
                 navigation.navigate("App"):setCurrent_tab(current_tab+1)}}
-            style={{fontSize:100,
-                    opacity:100}}
+            style={{fontSize:20,
+                    top:800,
+                alignSelf: 'flex-end',
+                
+            color:'white'}}
             >
-                {current_tab}
+                
+                -
         </Text>
     </View>
     
