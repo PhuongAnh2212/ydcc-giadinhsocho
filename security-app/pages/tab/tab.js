@@ -7,9 +7,9 @@ import Leaderboard from '../leaderboard/leaderboard';
 // import Flashcard from '../practice/flashcard/flashcard';
 // import Setting from '../settings/settings';
 import Lesson from '../practice/lesson';
-import DragnDrop from '../games/drag and drop game/dnd';
-import Quiz from '../practice/quiz';
 import GameMenu from '../games/menu/game-menu';
+import Coop from '../games/coop/coop';
+// import Coop2 from '../games/coop/coop2';
 
 const Tab = createBottomTabNavigator();
 
@@ -38,7 +38,7 @@ function MyTabs() {
                 <MaterialCommunityIcons name="account-group-outline" color={color} size={26} />
               ),
               tabBarShowLabel: false}}/>
-            <Tab.Screen name="Setting" component={Homepage} 
+            <Tab.Screen name="Setting" component={Coop} 
           options={{headerShown:false,
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="saw-blade" color={color} size={26} />

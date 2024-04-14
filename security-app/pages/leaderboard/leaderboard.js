@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
+import {FlatList, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import MamImage from '../../assets/pfp/mam.jpg';
 import DuaImage from '../../assets/pfp/dua.jpg';
@@ -205,7 +206,7 @@ function Leaderboard ({navigation}) {
               fontWeight: 'bold',
               paddingTop: 10
           }}>
-            Bạn xếp thứ
+            You rank
           </Text>
           <View style= {{
             flexDirection:'row',
@@ -218,7 +219,7 @@ function Leaderboard ({navigation}) {
                 color: '#FFFFFF',
                 fontWeight: 'bold'
             }}>
-              1
+              1st
             </Text> 
             <Text style={{
               paddingTop: 20,
@@ -228,8 +229,9 @@ function Leaderboard ({navigation}) {
               fontSize: 12,
               fontWeight: '600'
             }}>
-              Tăng 3 hạng{"\n"}
-              so với tuần trước
+              Increased 3 ranks {'\n'}
+              compared to {'\n'}
+              last week
             </Text>
           </View>
         </View>
@@ -241,7 +243,7 @@ function Leaderboard ({navigation}) {
           fontWeight: 500,
           color: '#001F70'
       }}>
-        Tuần này
+        This week
       </Text>
       <Text style={{
         paddingLeft: 30,
@@ -249,7 +251,7 @@ function Leaderboard ({navigation}) {
         paddingTop: 20,
         color: '#001F70'
       }}>
-        Thứ hạng học tập
+        Ranking
       </Text>
       <FlatList
         data={DATA} //data ng dùng m sort cao tới thấp nhé meo meo
@@ -274,11 +276,13 @@ function Leaderboard ({navigation}) {
             />
             <View style={styles.text}>
               <Text style={styles.name}>{item.username}</Text>
-              <Text style={styles.score}>   Điểm tuần này: {item.score}</Text>
+              <Text style={styles.score}>   This week score: {item.score}</Text>
             </View>
+            
         </View>}
         keyExtractor={item => item.id}
       />
+      
     </View>
   );
 };

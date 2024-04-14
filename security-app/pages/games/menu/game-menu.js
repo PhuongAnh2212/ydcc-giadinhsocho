@@ -4,16 +4,17 @@ import { StyleSheet, View, Text, TouchableOpacity, Image, ImageBackground } from
 
 // Ajax is me frfr (Get urges after a minor inconvenience)
 
-const GameMenu = ({ navigation }) => {
+function GameMenu ({navigation})  {
   return (
-
+    
     <View style={{
         paddingTop: 50,
         maxWidth: '100%'
+
     }}>
+
         <Text style = {[styles.lesson]}>Game Zone</Text>
         <Text style = {[styles.explain]}>Learn by playing!</Text>
-
         <View stlye={{
             
         }}>
@@ -40,8 +41,7 @@ const GameMenu = ({ navigation }) => {
                 left: 17}} 
                 source={require('../../../assets/gamebuttons/coopgame.png')}/>
         </TouchableOpacity>
-
-    </View>
+        </View>
     
   );
 };
