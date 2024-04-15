@@ -1,9 +1,9 @@
-# ydcc-app
+# Family-based Gamified Educational App: Scam in a Game
 
-### 2nd Runner Up Youth Digital Citizenship Challenge - Family-based Gamified Educational App: Scam in a Game
-![Group 36](https://github.com/PhuongAnh2212/ydcc-giadinhsocho/assets/119726597/b17ad7ca-19e7-4acb-b89c-ee60282e2259)
+## 🥉 2nd Runner Up Youth Digital Citizenship Challenge
+![thumbnail](https://github.com/PhuongAnh2212/ydcc-giadinhsocho/assets/119726597/c787dc5e-e5a5-4b84-bc85-890c7c0da32a)
 
-### How to use
+## How to use
 
 1. Pull repo to your local devices
 2. Run these:
@@ -32,8 +32,11 @@
 3. Run app using Expo Go
 `npx expo start`
 
-Sẽ có link dẫn đến web version ở dưới mã QR
+## People of this amazing project
 
-**Mỗi khi tải package nào thì báo mn và commit liền!!! Để tránh conflict file lock với nhau vì mỗi đứa 1 ver**
+Giving credit to my dearest sisters: 
+[@Dao Minh Khue] (https://github.com/KhueDao29)
+[@Le Thi Ha Chi] (https://github.com/natsun08)
 
-*Tải cái j đã có thì npm install sẵn chứ đừng tải thêm lỡ conflict ver*
+Indirect yet significant
+@Nguyen Van Trang together with @To Nu Quynh Nhu
