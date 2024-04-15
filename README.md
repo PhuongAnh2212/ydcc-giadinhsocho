@@ -26,11 +26,11 @@
 
 **UI Library**
 
-    npm install react-native-safe-area-context@4.8.2
+        npm install react-native-safe-area-context@4.8.2
+        
+        npm install react-native-screens@~3.29.0
 
-    npm install react-native-screens@~3.29.0
-
-    npm install @mui/material @emotion/react @emotion/styled
+        npm install @mui/material @emotion/react @emotion/styled
 
 -- These are for preventing version conflicts
 
@@ -43,6 +43,7 @@
 Giving credit to my dearest sisters: 
 
 [@Dao Minh Khue](https://github.com/KhueDao29)
+
 [@Le Thi Ha Chi](https://github.com/natsun08)
 
 Indirect yet significant
